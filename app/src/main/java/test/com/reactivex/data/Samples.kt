@@ -7,5 +7,11 @@ fun sampleList():List<Sample>{
             name = "RxLifeCycle",
             description = "RxLifeCycle Sample"
         ),
+        Sample(
+            id = 1,
+            name = "RxPermission",
+            description = "RxPermission Sample"
+        ),
     )
 }
+
