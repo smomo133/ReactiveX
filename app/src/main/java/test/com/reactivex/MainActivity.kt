@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import test.com.reactivex.data.Sample
 import test.com.reactivex.data.sampleList
 import test.com.reactivex.ui.main.RxLifecycleActivity
+import test.com.reactivex.ui.main.RxPermissionFragment
 import test.com.reactivex.ui.main.SamplesAdapter
 
 class MainActivity : AppCompatActivity() {
@@ -25,6 +26,7 @@ class MainActivity : AppCompatActivity() {
     private fun adapterOnClick(sample:Sample){
         when(sample.id){
             0 -> startLifeCycleActivity()
+            1 -> startFragment(RxPermissionFragment())
         }
     }
 

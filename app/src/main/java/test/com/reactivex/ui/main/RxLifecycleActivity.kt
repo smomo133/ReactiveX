@@ -33,7 +33,7 @@ class RxLifecycleActivity : RxAppCompatActivity() {
         super.onStart()
 
         // Using automatic unsubscription, this should determine that the correct time to
-        // unsubscribe is onStop (the opposite of onStart).
+        // unsubscribe is onStop
         Observable.interval(1, TimeUnit.SECONDS)
             .doOnDispose { Log.i(TAG, "Unsubscribing subscription from onStart()") }
             .bindToLifecycle(this)

@@ -41,11 +41,16 @@ dependencies {
     implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.3.1'
     implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.1'
 
-
+    implementation 'io.reactivex.rxjava3:rxandroid:3.0.0'
+    implementation 'io.reactivex.rxjava3:rxjava:3.0.0'
     // If you want pre-written Activities and Fragments you can subclass as providers
     implementation 'com.trello.rxlifecycle4:rxlifecycle-components:4.0.2'
     // If you want to use Kotlin syntax with Android Lifecycle
     implementation 'com.trello.rxlifecycle4:rxlifecycle-android-lifecycle-kotlin:4.0.2'
+    //
+    implementation 'com.github.tbruyelle:rxpermissions:0.12'
+    //
+    implementation 'com.jakewharton.rxbinding4:rxbinding:4.0.0'
 
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
