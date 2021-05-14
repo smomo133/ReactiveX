@@ -9,11 +9,6 @@
     android:background="@color/white"
     tools:context=".ui.main.RxPermissionFragment">
 
-    <TextureView
-        android:id="@+id/textureView"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
-
     <Button
         android:id="@+id/enable_camera"
         android:layout_width="wrap_content"
