@@ -4,18 +4,18 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 
 class DataSource {
-    private val initSampleList = sampleList()
-    private val sampleLiveData = MutableLiveData(initSampleList)
+    private val initExampleList = exampleList()
+    private val exampleLiveData = MutableLiveData(initExampleList)
 
-    fun getSampleId(id:Int):Sample?{
-        sampleLiveData.value?.let {
+    fun getSampleId(id:Int):Example?{
+        exampleLiveData.value?.let {
             return it.firstOrNull{ it.id == id}
         }
         return null
     }
 
-    fun getSampleList():LiveData<List<Sample>>{
-        return sampleLiveData
+    fun getSampleList():LiveData<List<Example>>{
+        return exampleLiveData
     }
 
     companion object{

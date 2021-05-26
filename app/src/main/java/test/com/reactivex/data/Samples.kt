@@ -1,16 +1,21 @@
 package test.com.reactivex.data
 
-fun sampleList():List<Sample>{
+fun exampleList():List<Example>{
     return listOf(
-        Sample(
+        Example(
             id = 0,
             name = "RxLifeCycle",
-            description = "RxLifeCycle Sample"
+            description = "RxLifeCycle Example"
         ),
-        Sample(
+        Example(
             id = 1,
             name = "RxPermission",
-            description = "RxPermission Sample"
+            description = "RxPermission Example"
+        ),
+        Example(
+            id = 2,
+            name = "Subject",
+            description = "Subject Example"
         ),
     )
 }

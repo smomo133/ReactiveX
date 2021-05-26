@@ -8,15 +8,15 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import test.com.reactivex.R
-import test.com.reactivex.data.Sample
+import test.com.reactivex.data.Example
 
-class SamplesAdapter(private val onClick: (Sample) -> Unit):
-    ListAdapter<Sample, SamplesAdapter.SampleViewHolder>(SampleDiffCallback) {
+class SamplesAdapter(private val onClick: (Example) -> Unit):
+    ListAdapter<Example, SamplesAdapter.SampleViewHolder>(SampleDiffCallback) {
 
-    class SampleViewHolder(itemView: View, val onClick:(Sample)->Unit):
+    class SampleViewHolder(itemView: View, val onClick:(Example)->Unit):
         RecyclerView.ViewHolder(itemView){
         private val sampleTextView:TextView = itemView.findViewById(R.id.sample_text)
-        private var currentSample:Sample? = null
+        private var currentSample:Example? = null
 
         init {
             itemView.setOnClickListener {
@@ -26,7 +26,7 @@ class SamplesAdapter(private val onClick: (Sample) -> Unit):
             }
         }
 
-        fun bind(sample:Sample){
+        fun bind(sample:Example){
             currentSample = sample
             sampleTextView.text = sample.name
         }
@@ -44,12 +44,12 @@ class SamplesAdapter(private val onClick: (Sample) -> Unit):
     }
 }
 
-object SampleDiffCallback:DiffUtil.ItemCallback<Sample>(){
-    override fun areItemsTheSame(oldItem: Sample, newItem: Sample): Boolean {
+object SampleDiffCallback:DiffUtil.ItemCallback<Example>(){
+    override fun areItemsTheSame(oldItem: Example, newItem: Example): Boolean {
         return oldItem == newItem
     }
 
-    override fun areContentsTheSame(oldItem: Sample, newItem: Sample): Boolean {
+    override fun areContentsTheSame(oldItem: Example, newItem: Example): Boolean {
         return oldItem.id == newItem.id
     }
 }

@@ -5,11 +5,12 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
-import test.com.reactivex.data.Sample
-import test.com.reactivex.data.sampleList
+import test.com.reactivex.data.Example
+import test.com.reactivex.data.exampleList
 import test.com.reactivex.ui.main.RxLifecycleActivity
 import test.com.reactivex.ui.main.RxPermissionFragment
 import test.com.reactivex.ui.main.SamplesAdapter
+import test.com.reactivex.ui.main.SubjectFragment
 
 class MainActivity : AppCompatActivity() {
 
@@ -20,13 +21,14 @@ class MainActivity : AppCompatActivity() {
         val samplesAdapter = SamplesAdapter{sample -> adapterOnClick(sample) }
         val recyclerView:RecyclerView = findViewById(R.id.recycler_view)
         recyclerView.adapter = samplesAdapter
-        samplesAdapter.submitList(sampleList())
+        samplesAdapter.submitList(exampleList())
     }
 
-    private fun adapterOnClick(sample:Sample){
+    private fun adapterOnClick(sample:Example){
         when(sample.id){
             0 -> startLifeCycleActivity()
             1 -> startFragment(RxPermissionFragment())
+            2 -> startFragment(SubjectFragment())
         }
     }
 
