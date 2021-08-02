@@ -49,8 +49,10 @@ dependencies {
     implementation 'com.trello.rxlifecycle4:rxlifecycle-android-lifecycle-kotlin:4.0.2'
     //
     implementation 'com.github.tbruyelle:rxpermissions:0.12'
-    //
+    //Platform bindings
     implementation 'com.jakewharton.rxbinding4:rxbinding:4.0.0'
+    //AndroidX library bindings
+    implementation 'com.jakewharton.rxbinding4:rxbinding-viewpager2:4.0.0'
 
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'

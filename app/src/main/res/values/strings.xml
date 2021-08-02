@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">ReactiveX</string>
+    <string name="label_orientation">Orientation:</string>
 </resources>

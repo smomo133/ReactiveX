@@ -21,6 +21,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".ui.main.RxLifecycleActivity"/>
+        <activity android:name=".ui.main.RxBindingActivity"/>
     </application>
 
 </manifest>

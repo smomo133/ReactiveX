@@ -17,6 +17,11 @@ fun exampleList():List<Example>{
             name = "Subject",
             description = "Subject Example"
         ),
+        Example(
+            id = 3,
+            name = "RxBinding",
+            description = "RxBinding Example"
+        ),
     )
 }
 
